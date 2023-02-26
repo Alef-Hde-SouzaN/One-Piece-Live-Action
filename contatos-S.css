@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Almendra+SC&family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;  
+}
+
+li {
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+li:hover {
+    color: #26b5f2;
+
+}
+
+#logo {
+    width: 250px;
+    height: auto;
+}
+
+#rede {
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.subrede {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+
+.social {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+#banner {
+    background-image: url('https://knightedgemedia.com/wp-content/uploads/2023/01/netflix-one-piece-promo-banner1.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+.container {
+    background-color: white;
+    width: 1100px;
+    height: 500px;
+    margin-top: 25px;
+    margin-left: 10%;
+    border-radius: 10px;
+    display: flex;
+}
+
+.content {
+    font-family: 'Almendra SC' , sans-serif;    
+    width: 50%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+p {
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.content-2 {
+    width: 50%;
+    height: auto;
+    font-family: 'Almendra SC' , sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#text {
+    height: 30px;
+    width: 400px;
+    background-color: #ececec;
+    border: none;
+    border-radius: 5px;
+}
+
+#email {
+    height: 30px;
+    width: 400px;
+    background-color: #ececec;
+    border: none;
+    border-radius: 5px;
+}
+
+#number {
+    height: 30px;
+    width: 400px;
+    background-color: #ececec;
+    border: none;
+    border-radius: 5px;
+}
+
+#file {
+    border: none;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+#textarea {
+    background-color: #ececec;
+    border: none;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #ececec;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: 'Almendra SC' , sans-serif;
+    cursor: pointer;
+    font-size: 19px;
+    outline: none;
+
+}
+
+.button:hover {
+    color:white;
+    background-color: #000424;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo {
+    width: 50px;
+    height: 20px;
+    background-color: #ececec;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.grupo:hover {
+    background-color: #00aeed;
+    color: white;
+}
+
+
+
+
+
+
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+span {
+    color: #fff;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+.footer-navigation{
+    display: none;
+}
+
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.github{
+    color: #fff;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+
+
+@media(max-width: 768px) {
+    .footer-navigation {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #banner{
+        background-position: 70%;  
+        height: 180px;
+         
+    }
+
+
+
+    #rede {
+        width: 20%;
+        height: auto;
+        display: block;
+        justify-content: center;
+        
+    }
+    
+    .subrede {
+        width: 100%;
+        height: auto;
+        display: block;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        column-gap: 40px;
+    }
+    
+    
+    .social {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+
+    .container {
+        background-color: white;
+        width: 100%;
+        height: 800px;
+        margin-top: 25px;
+        margin-left: 10%;
+        border-radius: 10px;
+        display: block;
+    }
+    
+    .content-2 {
+        width: 80%;
+        height: auto;
+        font-family: 'Almendra SC' , sans-serif;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .content {
+        font-family: 'Almendra SC' , sans-serif;    
+        width: 80%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+
+}

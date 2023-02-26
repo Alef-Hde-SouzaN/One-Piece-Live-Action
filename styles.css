@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Almendra+SC&family=Kdam+Thmor+Pro&display=swap');
+/* Parte 2
+este link acima foi retirado do Site https://fonts.google.com/ é com ele que habilitamos nossa edição de
+texto, primeiro devemos colocar o nome da fonte dentro da (TAG OU CLASS OU ID) que queremos estilizar, 
+neste caso foi da TAG LI e colocamos da seguinte forma "font-family: 'Almendra SC' , sans-serif;", após
+isso dentro da fonts google clicamos na fonde, vamos em SELECT REGULAR, deve abrir uma janela a esquerda
+caso não abra tem um botão no canto superior esquerdo com 3 quadrados e 1 + é só clicar nele, após isso
+devemos clicar na opção @import e na primeira caixa vai ter o @import dentro da TAG STYLES, copiar e 
+colar na primeira linha.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+/* 
+    O * {} é usado para determinar que o que colocarmos aqui dentro vai ser para toda a pág HTML, usamos
+    muito para resetar as configurações da página. Neste caso:
+    Margim: colocamos 0 pois não queremos margem a margem padrão entre o site e o elemento
+    Padding: colocamos 0 pois não queremos a distância padrão entre o conteúdo de um elemento e suas 
+    bordas.
+    list-style: none; sem nenhuma estilização de lista padrão.
+    text-decoration: none; sem nenhuma decoração de texto padrão.
+    background-color: black; fundo da página em vez de ser branco vai ser preto.
+*/
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 
+
+height - Altura (pode ser em PX ou em %).
+display: flex; - visa organizar os elementos de uma página HTML dentro de seus containers de forma
+dinânica. Ou seja, independente das duas dimensões eles sempre manterão um layout flexível dentro do seu
+elemento pai reorganizando - se de acordo com a necessidade, assim sendo o header está dentro do Body que
+é a págnia em si e as demais TAGs que são blocos se organizam dentro do Header que é o cabeçalho 
+digamos assim.
+
+justify-content: é empregada para alinhar os elementos ao longo do eixo principal.
+justify-content: space-around; os itens são distribuídos igualmente no espaço disponível ao redor deles.
+
+align-items — controla o alinhamento de todos os itens no eixo transversal. 
+align-self — controla o alinhamento individual de um item no eixo transversal. 
+align-content — descrito na especificação como “packing flex lines”; controla o espaço entre as 
+linhas no eixo transversal.
+
+align-items: center; garante que os flex-items dentro de um elemento com display flex vão centralizar 
+(verticalmente e horizontalmente).
+
+*/
+
+nav {
+    width: 60%;
+}
+
+/* Está apenas indicando que esse bloco vai ter 60% da Largura da Página, assim sendo o restante é da
+LOGO */
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;  
+}
+
+/* 
+display: flex; - visa organizar os elementos de uma página HTML dentro de seus containers de forma
+dinânica. Ou seja, independente das duas dimensões eles sempre manterão um layout flexível dentro do seu
+elemento pai reorganizando - se de acordo com a necessidade, Indica que ele vai se ajustar dentro do bloco
+da TAG NAV.
+
+width: como este bloco está dentro da TAG NAV está indicando que ele vai ter 100% de largura relacionado
+neste bloco.
+
+justify-content: é empregada para alinhar os elementos ao longo do eixo principal.
+
+justify-content: space-between; O primeiro item é deslocado para o início do eixo principal, 
+o último é deslocado para o final do eixo principal 
+e os demais são distribuídos uniformemente entre eles; 
+
+O Eixo é na Horizontal pelo Bloco NAV
+
+*/
+
+li {
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+/* 
+list-style. Esta é a maneira abreviada de se escrever uma só declaração para duas das propriedades 
+para listas (none é nenhuma)
+
+Color: color do elemento, nesse caso da letra
+
+cursor: pointer; O cursor: pointer é uma propriedade CSS que define o cursor do mouse como um 
+"ponteiro" sobre determinado elemento (é o que vai determina ação nesse elemento pelo mouse).
+
+font-size: 30px; estamos apenas indicando qual vai ser o tamanho dessa fonte, nesse caso em PX
+
+transition: .5s; estamos indicando em quanto tempo vai ser a transição entre o estágio inicial e o 
+determinado pelo HOVER
+
+font-family: 'Almendra SC' , sans-serif; Aqui vamos indicar qual vai ser a fonte, explicada mais a fundo
+no começo do cód CSS anotações. 'Almendra SC' (nome da fonte). sans-serif (propriedade usada)
+
+*/
+
+li:hover {
+    color: #26b5f2;
+
+}
+
+/* 
+
+Neste caso aqui colocamos o HOVER na frente da TAG LI para indicar que ao passar o mouse (determinado
+por cursor: pointer;) vai trocar de cor (de: cursor: pointer; para: color: #26b5f2;) o tempo dessa
+mudança é (transition: .5s;).
+
+*/
+
+#logo {
+    width: 250px;
+    height: auto;
+}
+
+/* Aqui só indicamos a Altura e Largura da nossa logo, podemos ver que a Altura colocamos como
+AUTO para ela se adaptar. */
+
+/* Obs.: para estiligar direto uma TAG, só precisamos colocar o nome da TAG, como nos casos acima.
+Para Estilizar uma Class precisamos colocar um "." antes do nome que demos para a Class
+Para Estilizar um ID precisamos colocar um "#" antes do nome que demos para o ID
+
+Nesses casos iniciais só colocamos ID na TAG IMG pois as demais não vão se repetir, em caso de repetição
+devesse colocar uma Class ou ID
+*/
+
+#rede {
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.subrede {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+
+.social {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+
+
+
+
+#banner {
+    background-image: url('https://knightedgemedia.com/wp-content/uploads/2023/01/netflix-one-piece-promo-banner1.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+/* Parte 3 */
+
+/* 
+background-image: url(''); neste caso em vez de usamos um caminho, usamos um link de internet
+background-position: 50% 50%; vai ocupa uma posição dentro do bloco de 50% de Altura e 50% de Largura
+background-size: cover; Ocupar todo o espaço do nosso bloco DIV (define como e onde a 
+imagem de fundo é posicionada)
+Depois é só a configuração da imagem em si (Altura e Largura)
+*/
+
+#trailer-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+/* Este é o bloco principal DIV, o Primeiro
+
+Usamos as propriedas abaixo da altura e largura para alinhar os elementos dentro do bloco, como falamos
+na HEADER
+
+*/
+
+.content {
+    width:  60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Este Bloco DIV vai conter nosso vídeo, texto e botão, as configurações dele mostram
+a largura que ele vai ter dentro do elemento principal, que o display vai ser flexivel como falamos
+e que os itens vão se alocando ao centro e la laterial conforme distribuição */
+
+.trailer {
+    width: 50%;
+}
+
+/* Está class já está dentro da TAG vídeo estão é a customização do trailer em si, com isso mostra que
+nosso vídeo vai comportar 50% de largura do bloco DIV class content
+*/
+
+#sinopse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+/* Estilização da nossa sinopse
+
+    width: 50%; - largura referente ao bloco DIV class content
+    display: flex; - para se organizar flexivelmente dentro do bloco
+    flex-direction: column; Os itens são organizados em forma de colunas iniciando de cima para baixo
+    justify-content: space-between; O primeiro item é deslocado para o início do eixo principal, 
+    o último é deslocado para o final do eixo principal 
+    margin-left: 30px; distanciamento do outro bloco, neste caso o vídeo
+*/
+
+.description {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Almendra SC' , sans-serif;
+    width: 70%;
+    text-align: justify;
+}
+
+.description2 {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Almendra SC' , sans-serif;
+    width: 70%;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+
+
+/* é a estilização do nosso texto
+
+aqui determinamos a cor do texto, o tamanho dele, a fonte e a largura que ele vai ter dentro do bloco
+sinopse
+
+No segundo texto coloquei margin-top para ter um espaçamento entre o paragrafo de cima e o de baixo e 
+coloquei em ambos um text-alingn: justify para justificar o texto
+*/
+
+.button {
+    width: 250px;
+    height: 60px;
+    background-color: red;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilização do Botão comprar ingresso
+.button {
+    width: 200px; - largura
+    height: 60px; - altura
+    background-color: #26b5f2; cor do fundo
+    color: #fff; cor da letra
+    padding: 8px 10px; distancia entre o bloco filho e o bloco pai
+    border-radius: 5px; arredondamento da borda
+    cursor: pointer; - para ser usado no cursor
+    transition: .8s; transição entre ele e o HOVER
+    font-size: 18px; Fonte do texto
+    display: flex; organização do display para ser flexivel referente ao bloco
+    justify-content: center; centralizado
+    align-items: center; centralizado
+    font-weight: bold; fonte negrito
+    border: none; sem borda
+    outline: none; sem borda ao passar o mouse
+    margin-top: 25px; distanciamento do topo
+}
+
+toda a programação dentro do HOVER é o que queremos mudar quando passar o mouse.
+*/
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* estamos ajustando o bloco pai abaixo do video e da sinopse mostrando que ele tem que ter 100% da 
+largura, que seu display tem que ser flexivel, que ele tem que ficar mais centralizado e que ele tem 
+que ter um espaçamento do bloco acima */
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+/* (ajustando dentro do bloco pai) display: grid; - faz entender racionalmente que o bloco é composto por grid (linhas e colunas), assim
+conseguimos usar o  grid-template-columns: repeat(5, 1fr); para mostrar que nossos cards tem que 
+ficar em 5 colunas por iguais. E os GAPS é para ajuste das rebardas */
+.card {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color:  #31261e;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+/* (Ajustando a largura e altura dentro do bloco acima, indicando que ele tem que 
+oculpar todo o bloco, que sua posição tem que ser centralizada, que a borda tem que ser 5px 
+nos cantos arredondadas, que vai ter a função mouse do HOVER, que vai ter a transição
+que seu display tem que ser flexivel e que a direção do vai ser vertical) 
+
+justify-content: flex-end; - alinhamento vertical 
+
+padding: 0 0 20px 10px; espaçamento com relação ao outro bloco
+
+*/
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Aqui neste Hover estamos mudando a escala da imagem o tamanho dela ao passar o mouse */
+
+/* abaixo vamos apenas chamar os banner card e incluir as fotos urls */
+
+.banner-1 {
+    background-image: url('https://pbs.twimg.com/media/FDyMvB7XoAQcNwT.jpg:large');
+}
+
+.banner-2 {
+    background-image: url('https://pbs.twimg.com/media/FDyKwHjaUAEpGN6.jpg:large');
+}
+
+.banner-3 {
+    background-image: url('https://www.hitsite.com.br/wp-content/uploads/2021/11/one-piece-live-cast3.jpeg');
+}
+
+.banner-4 {
+    background-image: url('https://www.animesxis.com.br/wp-content/uploads/2021/11/One-Piece-Taz-Skylar-Sanji.jpg');
+}
+
+.banner-5 {
+    background-image: url('https://www.animesxis.com.br/wp-content/uploads/2021/11/One-Piece-Jacob-Romero-Gibson-Usopp.jpg');
+}
+
+footer {
+    height: 600px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+/* ficou definico a altura do footer / que ele vai ter um display flexivel, vai se direcionar por
+colunas e se organizar centralizado, além de ser bem distibuido o espaço ao redor deles */
+
+span {
+    color: #fff;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+/* aqui fizemos apenas a estilização da cor e da fonte */
+
+.footer-navigation{
+    display: none;
+}
+
+/* fizemos essa estilização para ele não aparecer agora, quando usamor o media ai vamos configurar
+para ele aparecer somente com mobile */
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* fizemos uma configuração por display flexivel, direção por coluna e organização centralizada
+não tem problema já deixa estilizado, pois como o bloco pai não vai aparecer agora só no mobile, esse
+também não vai aparecer. */
+
+.github{
+    color: #fff;
+    font-family: 'Almendra SC' , sans-serif;
+}
+
+@media(max-width: 768px) {
+    .footer-navigation {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+
+    #banner{
+        background-position: 70%;  
+        height: 180px;
+         
+    }
+
+    #trailer-container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 95%;
+        font-size: 12px;
+    }
+
+    .description2 {
+        width: 95%;
+        font-size: 12px;
+    }
+
+    .button {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;      
+        margin-top: 15px;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+
+    #rede {
+        width: 20%;
+        height: auto;
+        display: block;
+        justify-content: center;
+        
+    }
+    
+    .subrede {
+        width: 100%;
+        height: auto;
+        display: block;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        column-gap: 40px;
+    }
+    
+    
+    .social {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+
+}
+
+/* 
+
+Como falado nossa programação foi iniciada primeiro como desk e depois seguir como mobile, então usamos 
+a ferramenta media que é chamada por um @, e usamos a propriedade entre parentes MAX com um WIDTH, ou seja
+a largura maxima aceita no desk vai ser 768, abaixo disso ele vai assumir a configuração mobile abaixo
+
+@media(max-width: 768px) {
+    .footer-navigation {
+        display: block; - disblay como bloco um abaixo do outro
+    }
+    nav {
+        display: none; o menu do cabeçalho vai sumir
+    }
+    #banner{
+        background-position: 40%; - para centralizar
+    }
+
+    #trailer-container{
+        width: 100%; - largura
+        height: 400px; - altura
+        display: flex; - flexivel
+        flex-direction: column; direção vertical
+    }
+
+    programação abaixo a mesma
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    somente largura
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; - distribuição uniforme
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .description2 {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 30px; - distancia do texto
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr; - antes era em 5 colunas agora é 1 coluna
+        margin-top: 150px; - distancia do botão
+    }
+
+}
+*/

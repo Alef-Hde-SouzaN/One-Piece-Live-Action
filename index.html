@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <!-- Projeto Prático 1 - Anotações
+        Parte 1
+
+        Iniciei criando a pasta de projeto prático 1 e coloquei lá dentro o trailer e a logo, para coloca
+        no site.
+
+        Coloquei dentro do vs code os aquivos index.html e styles.css.
+
+        dentro do arquivo html na primeira linha coloquei ! e press o ENTER, com isso vai criar toda a 
+        estrutura inicial que todo o site tem que ter, vimos na aula de estrutura inicial como cada um 
+        funciona.
+
+        Dentro da TAG <read><read/> colocamos a TAG <link /> é nela que usamos a propriedade rel="stylesheet"
+        e a propiedade hred="./..." é assim que conectamos o nosso arquivo HTML ao nosso arquivo CSS.
+
+        TAG <body><body/> é onde vamos construir nosso sitee coloco as anotações.    
+    
+    -->
+  <header>
+    <a href="./index.html">
+        <img id="logo" src="./logo.jpg" />
+    </a>
+    <nav>
+        <ul>
+            <a href="./contatos.html">
+                <li>Contato</li>
+            </a>
+            <a href="./fotos.html">
+                <li>Mugiwaras</li>
+            </a>
+            <a href="./comentarios.html">
+                <li>Comentários</li>
+            </a>
+            <div id="rede">
+                <div class="subrede">
+                <a class="social" href="https://github.com/Alef-Hde-SouzaN" target="_blank">
+                    <img src="./github-dark.jpg" />
+                </div>
+                </a>
+                <div class="subrede">
+                <a class="social" href="https://api.whatsapp.com/send?phone=5567992158052" target="_blank">
+                    <img src="./WhatsApp-dark.jpg" />
+                </div>
+                </a>
+                <div class="subrede">
+                <a class="social" href="https://instagram.com/alef_hd.souza?igshid=ZDdkNTZiNTM=" target="_blank">
+                    <img src="./Instagram-Dark.jpg" />
+                </a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Parte 2
+
+    Começamos usando a TAG <header><header/> muito usada para o topo da página (LOGO e Menu).
+    Colocamos nela a TAG <img /> onde vamos com a propriedade SCR colocar o caminho da logo para o site,
+    foi colocado também uma propriedade ID que vai ser usada no CSS
+    Colocamos TAG <nav><nav/> de navegação / TAG <ul></ul> lista não ordenada (representa uma lista
+    de itens sem ordem rígida) / TAG <a></a> âncora, que colocamos a propriedade HREF onde colocamos o
+    caminho do arquivo HTML, essa TAG é usada para nos direcionar para outra página / site e para 
+    finalizar usamos a TAG <li></li> lista dos intens de um elemento HTML (é usado para representar
+    um item que faz parte de uma lista / Linguagem de marcação de Hipertexto).
+
+    Foi criado os carquivos HTML (Comentários / Contatos / Fotos) para ser as páginas udadas nas TAGs A 
+    e LI, lembrando que na TAG A na propriedade HREF podemos também em vez de usar um caminho de arquivo
+    usar um endereço de pág já pronto, exemplo, o Contato poderia ser um link de um contato WhatsApp.
+
+    Para finalizar a parte 
+    seguimos para o CSS as anotações
+-->
+    <div id="banner"></div>
+
+    <!-- Parte 3 -->
+
+    <!-- está DIV foi criada apenas para se criar o Bloco onde vamos usar para estilizar dentro do 
+    CSS, veja que criamos um ID estão vamos usar ele para chamar dentro do CSS. -->
+
+    <div id="trailer-container">
+        <div class="content">
+            <video controls class="trailer">
+                <source src="./One Piece Live Action.mp4" type="video/mp4"/>
+                Seu navegador não possui suporte para vídeos
+            </video>
+            <div id="sinopse">
+                <p class="description">
+                    Prepare-se para zarpar com Luffy e a tripulação do Chapéu de Palha enquanto a amada 
+                    franquia One Piece ganha vida em uma nova e emocionante adaptação live-action. Filme 
+                    One Piece.                    
+                </p>
+                <p class="description2">
+                    Das batalhas épicas à vibrante construção do mundo, esta adaptação live-action 
+                    promete capturar o espírito do amado anime e mangá. Com um elenco e equipe 
+                    talentosos no comando, este certamente será um evento cinematográfico épico que os 
+                    fãs não vão querer perder.
+                </p>  
+                <a href="https://www.netflix.com/br/title/80217863" target="_blank">
+                    <button class="button">Assine Agora NETFLIX</button>
+                </a>              
+            </div>
+        </div>        
+    </div>
+
+    <!-- Nestá DIV foi criada para podermos inserir o trailer do vídeo e o descritivo, veja que no
+    pricipal colocamos um ID e nos demais colocamos class, isso vamos usar no CSS. 
+
+    A TAG vídeo usamos para chamar o trailer que baixamos, usando a TAG souse com as propriedades SRC
+    que colocamos o caminho da pasta e o type que informamos o formato. Abaixo o texto que colocamos
+    é de mensagem ao usuário em caso do computador dele não suportar o vídeo.
+    
+    O elemento HTML <p> representa um parágrafo. Em mídias visuais, parágrafos são representados 
+    como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco. 
+    Já em HTML, parágrafos são usados para agrupar conteúdos relacionados de qualquer tipo, 
+    como imagens e campos de um formulário. (vamos usar para a sinopse)
+
+    TAG button vai ser o botão de comprar o ingresso
+
+    -->
+    <div class="actor-cards-container">
+        <div class="cards-content">
+            <div class="card banner-1">Captain</div>
+            <div class="card banner-2">Immediate</div>
+            <div class="card banner-3">Navigator</div>
+            <div class="card banner-4">Chef</div>
+            <div class="card banner-5">Shooter</div>
+        </div>
+    </div>
+
+    <!-- 
+        
+        Parte 4
+        
+        esse bloco vai ser responsável pelos cards com as fotos e os nomes dos atores
+
+        O segundo DIV vai ser o responsável por agrupar todos os cards, dentro desse vamos ter 5 divs
+        que vão ser os cards em si
+
+        div class="card banner-1" - quando colocamos na class um espaço entre uma palavra e outra
+        a programação entende como 2 class, por exemplo na hora de colocar no CSS vamos conseguir 
+        estilizar separadamento:
+        .card{}
+        .banner-1{}
+        Emily Rudd - Nami (Navegadora)
+    -->
+    
+    <footer>
+        <img style="object-fit: contain;" id="logo" src="./logo.jpg" />
+        <span>Todos os direitos reservados ©</span>
+        <span>
+            Desenvolvido por: 
+            <a class="github" href="https://github.com/Alef-Hde-SouzaN" target="_blank">Alef H. de Souza Nascimento</a>
+        </span>
+
+        <nav class="footer-navigation">
+            <ul class="footer-list">
+
+                <a href="./contatos.html">
+                    <li>Contato</li>
+                </a>
+                <a href="./fotos.html">
+                    <li>Mugiwaras</li>
+                </a>
+                <a href="./comentarios.html">
+                    <li>Comentários</li>
+                </a>
+                <div id="rede">
+
+                    <div class="subrede">
+                    <a class="social" href="https://github.com/Alef-Hde-SouzaN" target="_blank">
+                        <img src="./github-dark.jpg" />
+                    </div>
+                    </a>
+                    <div class="subrede">
+
+                    <div class="subrede">
+                    <a class="social" href="https://instagram.com/alef_hd.souza?igshid=ZDdkNTZiNTM=" target="_blank">
+                        <img src="./Instagram-Dark.jpg" />
+                    </a>
+                    <a class="social" href="https://api.whatsapp.com/send?phone=5567992158052" target="_blank">
+                        <img src="./WhatsApp-dark.jpg" />
+                    </div>
+                    </a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+
+    </footer>
+
+
+    <!-- Parte 5
+    
+        Vamos desenvolver o rodapé (footer)
+
+        style="object-fit: contain; - basicamente para nossa imagem não perder a qualidade
+
+        Como colocamos o ID Logo ele vai manter as configurações que colocamos na do cabeçalho de 
+        altura e largura
+
+        Foi colocado os 2 span para indicar os direitos e o desenvolvimento
+
+        e foi criado o menu NAV do rodapé, foi colocado class nesse para ele sumir no desktop e só
+        aparecer quando tiver no mobile, essa configuração css vai ser realizada na parte 6.    
+    -->
+
+
+</body>
+</html>
